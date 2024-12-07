@@ -55,7 +55,7 @@ class Validator():
         if self.match('u'):
             res = 'u' + self.P() + self.A()
             if self.match('d'):
-                res += 'd' + self.A()
+                res += 'd' + self.P() + self.A()
                 return res
             else:
                 return ''
@@ -66,7 +66,7 @@ class Validator():
         if self.match('d'):
             res = 'd' + self.P() + self.B()
             if self.match('u'):
-                res += 'u' + self.B()
+                res += 'u' + self.P() + self.B()
                 return res
             else:
                 return ''
